@@ -4,8 +4,18 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #1D1D1D;
+	cursor: url('../public/cursor.png'), auto;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
+  overflow-x: hidden;
 }
-
+  
+  body:not(body:hover) .cursor::after {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +23,58 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-cloud {
+	flex: 1;
+}
+
+.tag-cloud > div {
+	transition: 1.4s;
+}
+.Circle {
+  position: absolute;
+  animation: circle 1s linear;
+}
+
+@keyframes circle {
+  0%{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: 1px solid #08FDD8;
+  }
+  20%{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: 1px solid #08fdd8cc;
+  }
+  40%{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: 1px solid #08fdd8c5;
+  }
+  60%{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid #08fdd894;
+  }
+  80%{
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    border: 1px solid #08fdd85e;
+  }
+  100%{
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+    border: 1px solid #08fdd800;
+    display: none;
+  }
 }

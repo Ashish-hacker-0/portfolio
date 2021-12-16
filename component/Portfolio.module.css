@@ -1,0 +1,88 @@
+.container{
+}
+.container p{
+    font-family: 'La Belle Aurore', cursive;
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+}
+.container > div:nth-child(2){
+    margin: 10px;
+    font-size: 65px;
+    line-height: 1.1;
+    color: #08FDD8;
+    font-weight: 700;
+    margin-left: 30px;
+}
+.container div  span{
+    display: inline-block;
+}
+.container  div  span:hover{
+   color:#08FDD8;
+   animation: scale 0.5s linear;
+}
+@keyframes scale {
+   0%{
+     transform: scale(1,1);
+   }   
+   25%{
+    transform: scale(1.2,0.8);
+
+   }
+   50%{
+      transform: scale(0.7,0.7);
+   }
+   75%{
+    transform: scale(0.8,1.2);
+
+   }
+   100%{
+    transform: scale(1,1);
+   }
+}
+.container p:nth-child(5){
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+.container > div{
+    display: flex;
+}
+
+@media screen and (max-width:1000px) {
+
+    .container p{
+        font-family: 'La Belle Aurore', cursive;
+        color: rgb(85, 85, 85);
+        font-size: 14px;
+    }
+    .container > div:nth-child(2){
+        margin: 10px;
+        font-size: 45px;
+        line-height: 1.1;
+        color: #08FDD8;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+    .container div  span{
+        display: inline-block;
+    }
+    .container  div  span:hover{
+       color:#08FDD8;
+       animation: scale 0.5s linear;
+    }
+    .container p:nth-child(5){
+        font-family: sans-serif;
+        color: white;
+        font-size: 17px;
+        margin: 10px;
+    }
+    .container > div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container > div > div{
+        min-width: 50vw;
+    }
+    
+}

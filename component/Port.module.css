@@ -1,0 +1,49 @@
+.container{
+    height: 35vh;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    opacity: 0.5;
+}
+.container img{
+    height: 140px;
+    width: 140px;
+    transition: 1s ease;
+}
+.para {
+   font-family: sans-serif;
+   font-weight: 700;
+   font-size: 50px;
+   transition: 1s ease;
+}
+.container:hover{
+    opacity: 1;
+}
+.container:hover p,.container:hover img{
+    transform: scale(2);
+}
+.absolute{
+    position: absolute;
+    background-color: #08FDD8;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    width: 0px;
+    font-size: 10px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border-radius: 150px;
+}
+.container:hover .absolute{
+    height: 150px;
+    width: 150px;
+}
+
+@media screen and (max-width:1000px) {
+    .container{
+        width: 50vw;
+    }
+}
