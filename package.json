@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.16.5",
+    "babel-runtime": "^6.26.0",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-animated-cursor": "^2.2.0",
