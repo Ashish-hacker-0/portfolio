@@ -64,6 +64,10 @@
 }
 @media screen and (max-width:1000px) {
 
+    .container{
+        padding: 10vh 20px;
+
+    }
     .container p{
         font-family: 'La Belle Aurore', cursive;
         color: rgb(85, 85, 85);

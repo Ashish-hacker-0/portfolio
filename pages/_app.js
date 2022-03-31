@@ -3,6 +3,7 @@ import Navigation from '../component/Navigation'
 import '../styles/globals.css'
 import {useRouter} from 'next/router'; 
 import { DefaultSeo } from 'next-seo';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

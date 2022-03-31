@@ -56,9 +56,12 @@
 }
 .container > div{
     display: flex;
+    background-color: black;
 }
 .contact{
     display: flex;
+    background-color: black;
+    height: 100vh;
 }
 .contact>div{
     flex:1;
@@ -107,8 +110,9 @@
 }
 .contact > div:nth-child(2) > div{
     margin: 40px;
-    background-color: rgba(0, 0, 0, 0.603);
     z-index: 1000000000;
+    background-color: rgba(0, 0, 0, 0.521);
+
     width: fit-content;
     color: white;
     padding: 20px;
@@ -223,15 +227,17 @@
         color: #1D1D1D;
         background-color: #08FDD8;
         background-position: -99.8% ;
-    
+    }
+    .contact{
+        background-color: black;
     }
     .contact > div:nth-child(2){
-       background-image: url('../public/map.png');
+       background-color: black;
        background-size: contain;
     }
     .contact > div:nth-child(2) > div{
         margin: 40px;
-        background-color: rgba(0, 0, 0, 0.603);
+        background-color: rgba(0, 0, 0, 0.521);
         width: fit-content;
         color: white;
         padding: 20px;

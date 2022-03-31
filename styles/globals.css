@@ -87,6 +87,7 @@ a {
   top: 0;
   left: 0;
   z-index: 1;
+  overflow: hidden;
 }
 .back>div{
   position: absolute;
