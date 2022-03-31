@@ -13,6 +13,9 @@ function MyApp({ Component, pageProps }) {
     initial={false}
     onExitComplete={() => window.scrollTo(0, 0)}
 >
+<Head>
+  <title>Ashish | Full Stack Developer | Android Developer - Freelancer</title>
+</Head>
 <DefaultSeo
         titleTemplate="%s - Ashish | Full Stack Developer | Android Developer - Freelancer"
         openGraph={{
