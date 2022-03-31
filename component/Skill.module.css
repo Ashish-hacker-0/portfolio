@@ -60,53 +60,43 @@
 }
 .about{
     display: flex;
-    padding: 20px 40px;
     background-color: black;
-    padding: 15vh 10vh;
+    padding: 15vh 20px 0 10vh;
     height: 100vh;
 }
 .about>div{
     flex:1;
 }
 .about >div:nth-child(2){
-    
-    z-index: 10;
-    text-align: center;
-}
-.about >div:nth-child(2) img{
-    width: 70%;
-    z-index: 1000000000000000;
-    /* transform: rotateY(90deg); */
-    transform: rotateY(180deg);
-    animation: movee 3s linear infinite;
-}
-@keyframes movee {
-
-    0%{
-        margin-top: -20px;
-    }
-    20%{
-        margin-top: -10px;
-    }
-    40%{
-        margin-top: 0px;
-    }
-    60%{
-       margin-top: 10px;
-    }
-    80%{
-       margin-top: -10px;
-    }   
-    100%{
-        margin-top: -20px;
-    } 
-}
-.about > div:nth-child(2) span{
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(85, 85, 85);
 }
 
-.about > div:nth-child(2) span:nth-child(even){
-    animation: zindex 5s infinite;
+.about > div:nth-child(2)>div{
+    flex:1;
+    background-color: #2A2A2A;
+    margin: 5px;
+    padding: 6px 16px;
+    z-index: 2;
+
+}
+.about > div:nth-child(2)>div>p:nth-child(1){
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+}
+.about > div:nth-child(2)>div>p:nth-child(2){
+    font-size: 14px;
+    padding: 5px 0;
+}
+.about>div:nth-child(2)>div>div{
+    display: flex;
+    align-items: center;
+}
+.about>div:nth-child(2)>div>div>img{
+    margin: 5px;
+    height:30px;
 }
 @keyframes zindex {
     0%{
@@ -167,6 +157,7 @@
         color: rgb(85, 85, 85);
         font-size: 14px;
     }
+    
     .container > div:nth-child(2){
         margin: 10px;
         font-size: 35px;
@@ -204,7 +195,7 @@
     .container p:nth-child(5){
         font-family: sans-serif;
         color: white;
-        font-size: 16px;
+        font-size: 10px;
         line-height: 1.5;
         margin: 10px;
         padding: 0 0px ;
@@ -223,13 +214,41 @@
     .about >div:nth-child(2){
         color: #08FDD8;
         flex-wrap: wrap;
-        font-weight: 700;
         transform: rotate3d(10,20,30);
-        display: none;
         left: 0;
         height: 50vh;
     }
     .about > div:nth-child(2) span{
         margin: 0px;
+    }
+    .about >div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        color: rgb(85, 85, 85);
+    }
+    
+    .about > div:nth-child(2)>div{
+        flex:1;
+        background-color: #2A2A2A;
+        margin: 5px;
+        padding: 6px 16px;
+    
+    }
+    .about > div:nth-child(2)>div>p:nth-child(1){
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+    }
+    .about > div:nth-child(2)>div>p:nth-child(2){
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .about>div:nth-child(2)>div>div{
+        display: flex;
+        align-items: center;
+    }
+    .about>div:nth-child(2)>div>div>img{
+        margin: 5px;
+        height:15px;
     }
 }

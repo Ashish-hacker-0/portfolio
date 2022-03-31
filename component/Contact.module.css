@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 10vh;
+    background-color: black;
 }
 
 .container p{
@@ -20,6 +21,7 @@
 }
 .container > div:nth-child(2)  span{
     display: inline-block;
+    z-index: 10000000;
 }
 .container > div:nth-child(2)  span:hover{
    color:#08FDD8;
@@ -68,6 +70,8 @@
     margin: 5px;
     border: none;
     font-size: 14px;
+    z-index: 100000000;
+
 }
 .container textarea{
     height: 20vh;
@@ -87,6 +91,8 @@
     background-size: 200% 100%;
     background-image: linear-gradient(to left,#08FDD8 50%,#1D1D1D 50%);
     transition: background-position 0.2s linear;
+    z-index: 100000000;
+
 }
 .container button:hover{
     color: white;
@@ -102,15 +108,22 @@
 .contact > div:nth-child(2) > div{
     margin: 40px;
     background-color: rgba(0, 0, 0, 0.603);
+    z-index: 1000000000;
     width: fit-content;
     color: white;
     padding: 20px;
+    position: absolute;
+}
+.contact > div:nth-child(2) > div>p{
+    z-index: 1000000000;
 }
 .contact > div:nth-child(2) > div > p:nth-child(1){
     margin-bottom: 20px;
+    z-index: 1000000000;
 }
 .contact > div:nth-child(2) > div span{
     color: #08FDD8;
+    z-index: 1000000000;
 }
 
 @media screen and (max-width:1000px) {
@@ -118,7 +131,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding: 10px;
+        padding: 10vh 30px 0 30px;
     }
     
     .container p{

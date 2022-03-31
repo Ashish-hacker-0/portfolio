@@ -9,7 +9,7 @@ function Port({link,name,tcolor,bcolor,img}) {
            {!img&&<p  className={styles.para} style={{color:tcolor,fontSize:30,fontFamily:'sans-serif',textAlign:'center'}} >{name}</p>}
            {img&&<img src={img.src}/>}
             <div className={styles.absolute}>
-               <a href={link} target="_blank" ><p>View Project</p></a>
+               <a href={link} target="_blank" ><p>View</p><p> Project</p></a>
             </div>
         </div>
     )

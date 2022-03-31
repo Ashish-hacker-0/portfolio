@@ -1,15 +1,21 @@
 .container{
+    padding: 15vh 10vh;
+    z-index: 10;
 }
-.container p{
+.container >p{
     font-family: 'La Belle Aurore', cursive;
     color: rgb(85, 85, 85);
+    position: relative;
     font-size: 14px;
+    z-index: 100000;
 }
 .container > div:nth-child(2){
-    margin: 10px;
+    margin: 0 10px;
     font-size: 65px;
     line-height: 1.1;
     color: #08FDD8;
+    z-index: 100000000;
+    position: relative;
     font-weight: 700;
     margin-left: 30px;
 }
@@ -48,7 +54,14 @@
 .container > div{
     display: flex;
 }
-
+.container>div:nth-child(8){
+    overflow: scroll;
+    z-index: 1000000000;
+    position: relative;
+}
+.container>div:nth-child(8)::-webkit-scrollbar{
+    display: none;
+}
 @media screen and (max-width:1000px) {
 
     .container p{
@@ -79,7 +92,6 @@
     }
     .container > div{
         display: flex;
-        flex-wrap: wrap;
     }
     .container > div > div{
         min-width: 50vw;

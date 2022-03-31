@@ -1,21 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Port from './Port';
 import styles from './Portfolio.module.css';
-import p1 from '../public/p1.png';
-import p2 from '../public/p2.png';
-import p3 from '../public/p3.png';
-import p4 from '../public/p4.png';
-import p5 from '../public/p5.png';
-import p6 from '../public/p6.png';
-import p7 from '../public/p7.png';
-import p8 from '../public/p8.png';
-import p9 from '../public/p9.png';
+
 import dbglogo from '../public/logo.png';
-import radlogo from '../public/logo.jpeg';
+import brandlologo from '../public/brandlo.png';
 import paklogo from '../public/logop.png';
 
 function Portfolio() {
+    const ref = useRef();
+
+    useEffect(()=>{
+        const interval = setInterval(()=>{
+            console.log('timeout');
+            const element = document.createElement('div');
+            element.style.marginLeft = Math.floor(Math.random() * (1001))+'px';
+            element.style.marginTop = Math.floor(Math.random() * (1001))+'px';
+            ref.current.appendChild(element);
+        },10);
+        // const clearId= timeout();
+
+        return()=>clearInterval(interval);
+        
+    })
+
     return (
+        <div>
         <div className={styles.container} >
             <p>{`<h2>`}</p>
             <div><span>M</span><span style={{marginRight:10}} >y</span> <span> P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></div>
@@ -25,10 +34,10 @@ function Portfolio() {
             <p>{`</p>`}</p>
             <p>{`<section>`}</p>
             <div>
-               <Port
-                   name={'Scholars IIT'}
-                   link={'https://www.scholarsiit.co.in/'}
-                   bcolor={'#FFFF00'}
+            <Port
+                   img={brandlologo}
+                   link={'https://www.brandlo.in/'}
+                   bcolor={'#FFFFFF'}
                    tcolor={'#B90000'}
                />
                <Port
@@ -49,14 +58,11 @@ function Portfolio() {
                    bcolor={'#000'}
                    tcolor={'#FFFFFF'}
                />
-              
-            </div>
-            <div>
                 <Port
-                   img={radlogo}
-                   link={'https://radianceclasses.co.in/'}
-                   bcolor={'#FDF9DE'}
-                   tcolor={'#111'}
+                   name={'Scholars IIT'}
+                   link={'https://www.scholarsiit.co.in/'}
+                   bcolor={'#FFFF00'}
+                   tcolor={'#B90000'}
                />
                <Port
                    img={paklogo}
@@ -79,6 +85,10 @@ function Portfolio() {
                
             </div>
             <p>{`</section>`}</p>
+            </div>
+            <div ref={ref} className="back" >
+               
+            </div>
         </div>
     )
 }

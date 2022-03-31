@@ -7,6 +7,8 @@ import Portfolio from '../component/Portfolio';
 import About from '../component/About';
 import Contact from '../component/Contact';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import { DefaultSeo } from 'next-seo'
 
 
 export default function Home() {
@@ -18,9 +20,6 @@ export default function Home() {
       
       <Top
       />
-      <Portfolio/>
-      <About/>
-      <Contact/>
     </div>
   )
 }

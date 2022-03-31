@@ -1,11 +1,38 @@
-.container{
-  z-index: 10;
-  overflow: hidden;
+.top{
+    max-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+
 }
+.top>div{
+    padding: 15vh 10vh;
+    flex:1;
+    overflow: hidden;
+}
+.top>div>img{
+    z-index: 1;
+}
+.top>div:nth-child(1){
+}
+.top>div:nth-child(2){
+    background-color: white;
+}
+.container{
+  overflow: hidden;
+  background: none;
+}
+
 .container p{
     font-family: 'La Belle Aurore', cursive;
     color: rgb(85, 85, 85);
     font-size: 14px;
+    position: relative;
+    z-index: 10000000;
+
+
 }
 .container p:nth-child(2){
     margin: 10px;
@@ -17,11 +44,19 @@
     font-size: 85px;
     line-height: 1.1;
     color: white;
-    font-weight: 700;
     margin-left: 30px;
+    z-index: 10000000;
+}
+.container>div:nth-child(4){
+    font-weight: 700;
+}
+.container>div:nth-child(6){
+    font-size: 60px;
 }
 .container div  span{
     display: inline-block;
+    position: relative;
+    z-index: 100000000;
 }
 .container  div  span:hover{
    color:#08FDD8;
@@ -138,9 +173,21 @@
     
 }
 @media screen and (max-width:1000px) {
+    .top{
+        flex-direction: column;
+    }
+    .top>div{
+        padding: 8vh 5vh;
+
+    }
+    .top>div:nth-child(2){
+        text-align: center;
+    }
+    .top>div>img{
+        width: 80%;
+    }
     .container{
         z-index: 10;
-        height: 100vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -152,18 +199,23 @@
         font-size: 14px;
     }
     .container p:nth-child(2){
-        margin: 10px;
+        margin: 1px;
     }
     .container p:nth-child(3){
-        margin: 10px 20px;
+        margin: 1px 2px;
     }
     .container div{
-        font-size: 35px;
+        font-size: 30px;
         line-height: 1.1;
         color: white;
-        font-weight: 700;
         margin-left: 5px;
         justify-self: center;
+    }
+    .container>div:nth-child(4){
+        font-weight: 700;
+    }
+    .container>div:nth-child(6){
+        font-size: 25px;
     }
     .container div  span{
         display: inline-block;
