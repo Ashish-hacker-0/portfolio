@@ -2,6 +2,7 @@ import { AnimatePresence } from 'framer-motion'
 import Navigation from '../component/Navigation'
 import '../styles/globals.css'
 import {useRouter} from 'next/router'; 
+import { DefaultSeo } from 'next-seo';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
