@@ -1,337 +1,84 @@
-.top{
-    max-height: 100vh;
-    min-height: 100vh;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    background-color: black;
-
-}
-.top>div{
-    padding: 15vh 10vh;
-    flex:1;
-    overflow: hidden;
-}
-.top>div>img{
-    z-index: 1;
-}
-.top>div:nth-child(1){
-}
-.top>div:nth-child(2){
-    background-color: lightgray;
-}
 .container{
-  overflow: hidden;
-  background: none;
-}
+    padding: 36px;
+    padding-top: 30vh;
 
-.container p{
-    font-family: 'La Belle Aurore', cursive;
-    color: rgb(85, 85, 85);
-    font-size: 14px;
-    position: relative;
-    z-index: 10000000;
-
-
+    height: 100vh;
 }
-.container p:nth-child(2){
-    margin: 10px;
-}
-.container p:nth-child(3){
-    margin: 10px 20px;
-}
-.container div{
-    font-size: 85px;
-    line-height: 1.1;
+.container>p:nth-child(1){
     color: white;
-    margin-left: 30px;
-    z-index: 10000000;
-}
-.container>div:nth-child(4){
     font-weight: 700;
+    font-size: 56px;
 }
-.container>div:nth-child(6){
-    font-size: 60px;
+.container>p:nth-child(2){
+    color: #68e0cf;
+    font-size:9px;
+    font-weight: 700;
+    margin: 20px 0;
 }
-.container div  span{
-    display: inline-block;
-    position: relative;
-    z-index: 100000000;
-}
-.container  div  span:hover{
-   color:#08FDD8;
-   animation: scale 0.5s linear;
-}
-@keyframes scale {
-   0%{
-     transform: scale(1,1);
-   }   
-   25%{
-    transform: scale(1.2,0.8);
-
-   }
-   50%{
-      transform: scale(0.7,0.7);
-   }
-   75%{
-    transform: scale(0.8,1.2);
-
-   }
-   100%{
-    transform: scale(1,1);
-   }
-}
-
-.container div p{
-    display: inline;
-}
-.container button{
-   background: none;
-   border:1px solid #08FDD8;
-   color: #08FDD8;
-   padding: 15px 45px;
-   font-size: 17px;
-   margin: 40px 20px;
-   letter-spacing: 1.3;
-   background-size: 200% 100%;
-   background-image: linear-gradient(to left,#08FDD8 50%,#1D1D1D 50%);
-   transition: background-position 0.2s linear;
-}
-.container button:hover{
+.container>p:nth-child(3){
+    font-size: 9px;
+    width: 50%;
     color: white;
-    color: #1D1D1D;
-    background-color: #08FDD8;
-    background-position: -99.8% ;
+}
+.container>div:last-child{
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: 40px 0;
+}
+.container>div:last-child>p:nth-child(1){
+    display: flex;
+    align-items: center;   
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.container>div:last-child>p:nth-child(1):hover{
+    background-color: white;
+    color:#373B40;
+}
+.container>div:last-child>a>svg{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 30px;
+    margin: 0 20px;
+    margin-top: 3px;
+    animation: scroll 1s linear infinite;
+}
+@keyframes scroll {
+    0%{
+        padding-top: -10px;
+    }
+    100%{
+        padding-top: 10px;
+    }
+}
+.container>div:last-child>a>svg:hover{
+    border-color: #68e0cf;
+    color: #68e0cf;
+    cursor: pointer;
+}
 
-}
-.container img{
-    
-}
-.animation > div{
-    height: 400px;
-    width: 400px;
-    border-radius: 200px;
-    border: 1px solid #08FDD8;
-    display: flex;
-    align-items: center;
-    animation: rotate 3s linear infinite;
-    justify-content: center;
-}
-.animation > div > div{
-    height: 300px;
-    width: 300px;
-    border-radius: 150px;
-    border-right: 1px solid #08FDD8;
-    border-left: 1px solid #08fdd86e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.animation > div > div > div{
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-    border-right: 1px solid #08FDD8;
-    border-left: 1px solid #08fdd86e;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.animation > div > div > div > div{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    border-right: 1px solid #08FDD8;
-    border-left: 1px solid #08fdd86e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.animation > div > div > div >div >div{
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    border-right: 1px solid #08FDD8;
-    display: flex;
-    border-left: 1px solid #08fdd86e;
-    align-items: center;
-    justify-content: center;
-}
-.animation{
-    position: absolute;
-    top: 0;
-}
-@keyframes rotate {
-
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-    
-}
-@media screen and (max-width:1000px) {
-    .top{
-        flex-direction: column;
-    }
-    .top>div{
-        padding: 8vh 5vh;
-
-    }
-    .top>div:nth-child(2){
-        text-align: center;
-    }
-    .top>div>img{
-        width: 80%;
-    }
+@media screen and (max-width:800px) {
     .container{
-        z-index: 10;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        padding-top: 36px;
+        text-align: center;
+        height: fit-content;
     }
-    .container p{
-        font-family: 'La Belle Aurore', cursive;
-        color: rgb(85, 85, 85);
-        font-size: 14px;
-    }
-    .container p:nth-child(2){
-        margin: 1px;
-    }
-    .container p:nth-child(3){
-        margin: 1px 2px;
-    }
-    .container div{
-        font-size: 30px;
-        line-height: 1.1;
+
+    .container>p:nth-child(1){
         color: white;
-        margin-left: 5px;
-        justify-self: center;
-    }
-    .container>div:nth-child(4){
         font-weight: 700;
+        font-size: 36px;
     }
-    .container>div:nth-child(6){
-        font-size: 25px;
+    .container>p:nth-child(3){
+        width: 100%;
+        padding: 20px;
     }
-    .container div  span{
-        display: inline-block;
-    }
-    .container  div  span:hover{
-        color:#08FDD8;
-        animation: scale 0.5s linear;
-    }
-    @keyframes scale {
-        0%{
-        transform: scale(1,1);
-        }   
-        25%{
-        transform: scale(1.2,0.8);
-    
-        }
-        50%{
-        transform: scale(0.7,0.7);
-        }
-        75%{
-        transform: scale(0.8,1.2);
-    
-        }
-        100%{
-        transform: scale(1,1);
-        }
-    }
-    
-    .container div p{
-        display: inline;
-    }
-    .container button{
-        background: none;
-        border:1px solid #08FDD8;
-        color: #08FDD8;
-        padding: 15px 45px;
-        font-size: 17px;
-        margin: 40px 20px;
-        letter-spacing: 1.3;
-        background-size: 200% 100%;
-        background-image: linear-gradient(to left,#08FDD8 50%,#1D1D1D 50%);
-        transition: background-position 0.2s linear;
-    }
-    .container button:hover{
-        color: white;
-        color: #1D1D1D;
-        background-color: #08FDD8;
-        background-position: -99.8% ;
-    
-    }
-    .container img{
-        
-    }
-    .animation > div{
-        height: 400px;
-        width: 400px;
-        border-radius: 200px;
-        border: 1px solid #08FDD8;
-        display: flex;
-        align-items: center;
-        animation: rotate 3s linear infinite;
+    .container>div:last-child{
         justify-content: center;
     }
-    .animation > div > div{
-        height: 300px;
-        width: 300px;
-        border-radius: 150px;
-        border-right: 1px solid #08FDD8;
-        border-left: 1px solid #08fdd86e;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .animation > div > div > div{
-        height: 200px;
-        width: 200px;
-        border-radius: 100px;
-        border-right: 1px solid #08FDD8;
-        border-left: 1px solid #08fdd86e;
     
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .animation > div > div > div > div{
-        height: 100px;
-        width: 100px;
-        border-radius: 50px;
-        border-right: 1px solid #08FDD8;
-        border-left: 1px solid #08fdd86e;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .animation > div > div > div >div >div{
-        height: 50px;
-        width: 50px;
-        border-radius: 25px;
-        border-right: 1px solid #08FDD8;
-        display: flex;
-        border-left: 1px solid #08fdd86e;
-        align-items: center;
-        justify-content: center;
-    }
-    .animation{
-        position: absolute;
-        top: 0;
-    }
-    @keyframes rotate {
-    
-        from{
-            transform: rotate(0deg);
-        }
-        to{
-            transform: rotate(360deg);
-        }
-        
-    }
 }

@@ -1,5 +1,5 @@
+import {Fragment} from 'react'
 import { AnimatePresence } from 'framer-motion'
-import Navigation from '../component/Navigation'
 import '../styles/globals.css'
 import {useRouter} from 'next/router'; 
 import { DefaultSeo } from 'next-seo';
@@ -8,7 +8,7 @@ import Head from 'next/head';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const url = `ashish.verce.app${router.route}`
-  return (<Navigation>
+  return (<Fragment>
   <AnimatePresence
     exitBeforeEnter
     initial={false}
@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
 >
 <Head>
   <title>Ashish | Full Stack Developer | Android Developer - Freelancer</title>
+  <link rel="icon" type="image/x-icon" href="/a.png"></link>
 </Head>
 <DefaultSeo
         titleTemplate="%s - Ashish | Full Stack Developer | Android Developer - Freelancer"
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         }}
         canonical={url}
       />
-<Component {...pageProps} /></AnimatePresence></Navigation>)
+<Component {...pageProps} /></AnimatePresence></Fragment>)
 }
 
 export default MyApp
