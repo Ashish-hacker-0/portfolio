@@ -7,7 +7,7 @@ function Project() {
 
   return (
     <div className={Styles.container} id="portfolio" >
-        <p>Portfolio</p>
+       <p className='text' ><span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span></p>
         <p>LATEST WORKS</p>
         <ul>
             <li onClick={()=>setActive(false)} className={!active?Styles.active:Styles.inactive} >Web</li>

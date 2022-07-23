@@ -4,7 +4,7 @@ import {BsChevronCompactRight} from 'react-icons/bs'
 function Contact() {
   return (
     <div className={Styles.container} id="contact" >
-       <p>Contact</p>
+       <p className='text' ><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></p>
        <p>LET'S TALK</p>
        <div>
            <div>
@@ -13,7 +13,7 @@ function Contact() {
                <p>EMAIL*</p>
                <input placeholder='ashish1222001@gmail.com' />
                <p>MESSAGE*</p>
-               <input placeholder='To Write' />
+               <textarea  placeholder='To Write' />
                <p>SEND MESSAGE <BsChevronCompactRight/></p>
            </div>
            <div>

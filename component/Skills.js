@@ -4,7 +4,7 @@ import Styles from './Skills.module.css'
 function Skills() {
   return (
     <div className={Styles.container} id="skill" >
-       <p>Coding Skills</p>
+       <p className='text' ><span>C</span><span>o</span><span>d</span><span>i</span><span>n</span><span>g</span> <span>S</span><span>k</span><span>i</span><span>l</span><span>l</span><span>s</span></p>
        <p>DEVELOPING ON</p>
        <div>
            <div>

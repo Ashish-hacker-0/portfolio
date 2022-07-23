@@ -4,7 +4,7 @@ import Styles from './Education.module.css'
 function Education() {
   return (
     <div className={Styles.container} id="education" >
-        <p>Education</p>
+       <p className='text' ><span>E</span><span>d</span><span>u</span><span>c</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span></p>
         <p>STUDIED AT</p>
         <div>
             <div>

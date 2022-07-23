@@ -29,17 +29,23 @@
    border-radius: 50%;
    padding: 3px;
 }
-.header>ul{
+.header ul{
     list-style: none;
     text-align: right;
     flex: 1;
+    min-width: fit-content;
 }
-.header>ul>li{
+.header ul li img{
+    height: 15px;
+    width: 15px;
+}
+.header ul li{
     
     display: inline;
     margin: 0 10px;
     font-size: 8px;
     font-weight: 700;
+    cursor: pointer;
 }
 .header>ul>li:hover{
     color: #68e0cf;

@@ -30,7 +30,8 @@ function MyApp({ Component, pageProps }) {
         }}
         canonical={url}
       />
-<Component {...pageProps} /></AnimatePresence></Fragment>)
+{/* <Component {...pageProps} /> */}
+</AnimatePresence></Fragment>)
 }
 
 export default MyApp

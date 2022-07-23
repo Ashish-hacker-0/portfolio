@@ -15,25 +15,53 @@ import Contact from '../component/Contact';
 export default function Home() {
   const [color,setColor] = useState('#08FDD8');
   const ref = useRef();
+  const [active,setActive] = useState(1);
 
   function animate(event){
+    const colors = ["red","blue","yellow","green","white","black","violet","pink"];
     var element  = document.createElement('div');
     element.className = 'Circle';
     element.style.top = event.clientY+'px';
     element.style.left = event.clientX + 'px';
-    element.style.border=`1px solid ${color}`
+    
+    element.style.border=`1px solid ${colors[Math.floor(Math.random()*colors.length)]}`
     ref.current.appendChild(element);
+}
+
+const emoji = (event) => {
+  const emojis = ["😀", "😂", "😆", "😊"];
+    var element  = document.createElement("p");
+    element.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+    element.className = 'Circle';
+    element.style.top = event.clientY+'px';
+    element.style.left = event.clientX + 'px';
+    
+    ref.current.appendChild(element);
+}
+
+const mouseHover = (event) => {
+   if(active==2){
+     animate(event);
+   }
+   if(active==3){
+     emoji(event);
+   }
 }
 
   return (
     <div className={styles.container} ref={ref}  >
-      <Header/>
+      <Header
+        active={active}
+        setActive={setActive}
+      />
       <div className={styles.body} >
         <div>
           <img src="/ashish8.png"/>
         </div>
         <div>
-           <Top/>
+           <Top
+
+           />
            <About/>
            <Profile/>
            <Project/>
